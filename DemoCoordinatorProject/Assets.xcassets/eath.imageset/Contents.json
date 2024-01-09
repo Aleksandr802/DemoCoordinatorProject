@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "iStock-1012400706_d_850_d_850.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true,
+    "template-rendering-intent" : "original"
+  }
+}
