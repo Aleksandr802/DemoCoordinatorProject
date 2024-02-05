@@ -11,6 +11,7 @@
 		D758F84D2B4E0115000C80DE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D758F84C2B4E0115000C80DE /* FirstViewController.swift */; };
 		D758F84F2B4E0129000C80DE /* FirstDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D758F84E2B4E0129000C80DE /* FirstDetailView.swift */; };
 		D758F8532B4E02B4000C80DE /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D758F8522B4E02B4000C80DE /* FirstViewModel.swift */; };
+		D7787FB22B706E8E00BB560C /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7787FB12B706E8E00BB560C /* FirstView.swift */; };
 		D78350432B4C8D6C0060994E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78350422B4C8D6C0060994E /* AppDelegate.swift */; };
 		D78350452B4C8D6C0060994E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78350442B4C8D6C0060994E /* SceneDelegate.swift */; };
 		D78350472B4C8D6C0060994E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78350462B4C8D6C0060994E /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		D758F84C2B4E0115000C80DE /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D758F84E2B4E0129000C80DE /* FirstDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstDetailView.swift; sourceTree = "<group>"; };
 		D758F8522B4E02B4000C80DE /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
+		D7787FB12B706E8E00BB560C /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		D783503F2B4C8D6C0060994E /* DemoCoordinatorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoCoordinatorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78350422B4C8D6C0060994E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D78350442B4C8D6C0060994E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7787FB32B706E9800BB560C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7787FB12B706E8E00BB560C /* FirstView.swift */,
+				D758F84E2B4E0129000C80DE /* FirstDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7787FB42B706EAE00BB560C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D758F8522B4E02B4000C80DE /* FirstViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7787FB52B706ECE00BB560C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D758F84C2B4E0115000C80DE /* FirstViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		D78350362B4C8D6C0060994E = {
 			isa = PBXGroup;
 			children = (
@@ -151,10 +178,10 @@
 		D783506D2B4CADF50060994E /* First */ = {
 			isa = PBXGroup;
 			children = (
-				D758F84E2B4E0129000C80DE /* FirstDetailView.swift */,
-				D758F84C2B4E0115000C80DE /* FirstViewController.swift */,
+				D7787FB52B706ECE00BB560C /* ViewController */,
+				D7787FB42B706EAE00BB560C /* ViewModel */,
+				D7787FB32B706E9800BB560C /* View */,
 				D758F8482B4E00CE000C80DE /* FirstTabCoordinator.swift */,
-				D758F8522B4E02B4000C80DE /* FirstViewModel.swift */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -251,6 +278,7 @@
 				D758F84F2B4E0129000C80DE /* FirstDetailView.swift in Sources */,
 				D78350782B4CB2000060994E /* SecondViewController.swift in Sources */,
 				D78350662B4CA08C0060994E /* OnboardingView.swift in Sources */,
+				D7787FB22B706E8E00BB560C /* FirstView.swift in Sources */,
 				D758F8532B4E02B4000C80DE /* FirstViewModel.swift in Sources */,
 				D78350712B4CAE510060994E /* SecondTabCoordinator.swift in Sources */,
 				D758F8492B4E00CE000C80DE /* FirstTabCoordinator.swift in Sources */,

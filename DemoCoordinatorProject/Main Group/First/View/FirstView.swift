@@ -1,22 +1,14 @@
 //
-//  FirstViewController.swift
+//  FirstView.swift
 //  DemoCoordinatorProject
 //
-//  Created by Oleksandr Seminov on 1/8/24.
+//  Created by Oleksandr Seminov on 2/4/24.
 //
 
 import UIKit
 import TinyConstraints
-import Combine
 
-class FirstViewController: UIViewController {
-    
-    var viewModel: FirstViewModel!
-    
-    var showDetailRequested: () -> () = { }
-    
-    var subscription = Set<AnyCancellable>()
-    
+class FirstView: UIView {
     var containerView: UIView = {
         let container = UIView(frame: .zero)
         container.backgroundColor = .clear
@@ -36,15 +28,20 @@ class FirstViewController: UIViewController {
         button.setTitleColor(.systemBlue, for: .normal)
         return button
     }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        setup()
+    
+    init() {
+        super.init(frame: .zero)
+        setUI()
     }
     
-    func setup() {
-        view.addSubview(containerView)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension FirstView {
+    func setUI() {
+        addSubview(containerView)
         containerView.addSubviews([infoLabel, detailButton])
         
         containerView.centerYToSuperview()
@@ -57,23 +54,13 @@ class FirstViewController: UIViewController {
         infoLabel.centerXToSuperview()
         infoLabel.height(60)
         
-        viewModel.$email.combineLatest(viewModel.$name).sink { [weak self] email, name in
-            if name.count + email.count > 0 {
-                self?.infoLabel.text = "\(name) with email \(email)"
-            } else {
-                self?.infoLabel.text = ""
-            }
-        }.store(in: &subscription)
-        
         detailButton.bottomToSuperview()
         detailButton.centerXToSuperview()
         detailButton.height(60)
         detailButton.width(200)
-        
-        detailButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
+}
+
+extension FirstView {
     
-    @objc func buttonAction() {
-        showDetailRequested()
-    }
 }
